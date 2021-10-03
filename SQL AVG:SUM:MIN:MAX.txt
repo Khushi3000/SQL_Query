@@ -1,0 +1,31 @@
+SUM is a SQL aggregate function. that totals the values in a given column. Unlike COUNT, you can only use SUM on columns containing numerical values.
+
+
+SELECT SUM(volume)
+  FROM tutorial.aapl_historical_stock_price
+
+
+
+SQL MIN/MAX
+
+
+MIN and MAX are SQL aggregation functions that return the lowest and highest values in a particular column.
+
+They're similar to COUNT in that they can be used on non-numerical columns. Depending on the column type, MIN will return the lowest number, earliest date, or non-numerical value as close alphabetically to "A" as possible. As you might suspect, MAX does the opposite—it returns the highest number, the latest date, or the non-numerical value closest alphabetically to "Z."
+
+For example, the following query selects the MIN and the MAX from the numerical volume column in the Apple stock prices dataset.
+
+SELECT MIN(volume) AS min_volume,
+       MAX(volume) AS max_volume
+  FROM tutorial.aapl_historical_stock_price
+
+
+SQL AVG
+
+
+
+AVG is a SQL aggregate function that calculates the average of a selected group of values. It's very useful, but has some limitations. First, it can only be used on numerical columns. Second, it ignores nulls completely. You can see this by comparing these two queries of the Apple stock prices dataset:
+
+SELECT AVG(high)
+  FROM tutorial.aapl_historical_stock_price
+ WHERE high IS NOT NULL
