@@ -1,0 +1,130 @@
+
+The SQL commands (UPDATE and DELETE) are used to modify the data that is already in the database. The SQL DELETE command uses a WHERE clause.
+
+
+SQL UPDATE statement is used to change the data of the records held by tables. Which rows is to be update, it is decided by a condition. To specify condition, we use WHERE clause.
+
+The UPDATE statement can be written in following form:
+
+UPDATE table_name SET [column_name1= value1,... column_nameN = valueN] [WHERE condition]  
+
+
+UPDATE table_name  
+SET column_name = expression  
+WHERE conditions  
+
+SQL statement:
+
+UPDATE students  
+SET User_Name = 'beinghuman'  
+WHERE Student_Id = '3'  
+
+
+Source Table:
+
+Student_Id	FirstName	LastName	User_Name
+1	Ada	Sharma	sharmili
+2	Rahul	Maurya	sofamous
+3	James	Walker	jonny
+
+
+Student_Id	FirstName	LastName	User_Name
+1	Ada	Sharma	sharmili
+2	Rahul	Maurya	sofamous
+3	James	Walker	beinghuman
+
+
+Updating Multiple Fields:
+
+If you are going to update multiple fields, you should separate each field assignment with a comma.
+
+SQL UPDATE statement for multiple fields:
+
+UPDATE students  
+SET User_Name = 'beserious', First_Name = 'Johnny'  
+WHERE Student_Id = '3'  
+
+Result of the table is given below:
+
+Student_Id	FirstName	LastName	User_Name
+1	Ada	Sharma	sharmili
+2	Rahul	Maurya	sofamous
+3	Johnny	Walker	beserious
+
+
+MYSQL SYNTAX FOR UPDATING TABLE:
+
+UPDATE table_name  
+SET field1 = new-value1, field2 = new-value2,  
+[WHERE CLAUSE]  
+
+
+SQL UPDATE SELECT:
+
+SQL UPDATE WITH SELECT QUERY:
+
+We can use SELECT statement to update records through UPDATE statement.
+
+SYNTAX:
+
+UPDATE tableDestination  
+SET tableDestination.col = value  
+WHERE EXISTS (  
+SELECT col2.value  
+FROM  tblSource  
+WHERE tblSource.join_col = tblDestination. Join_col  
+AND  tblSource.Constraint = value)  
+
+
+UPDATE   
+Table   
+SET  
+Table.column1 = othertable.column 1,  
+Table.column2 = othertable.column 2  
+FROM   
+Table  
+INNER JOIN  
+Other_table  
+ON  
+Table.id = other_table.id  
+
+
+My SQL SYNTAX:
+
+If you want to UPDATE with SELECT in My SQL, you can use this syntax:
+
+Let's take an example having two tables. Here,
+
+
+First table contains -
+
+Cat_id, cat_name,
+
+And the second table contains -
+
+Rel_cat_id, rel_cat_name
+
+SQL UPDATE COLUMN:
+
+We can update a single or multiple columns in SQL with SQL UPDATE query.
+
+SQL UPDATE EXAMPLE WITH UPDATING SINGLE COLUMN:
+
+UPDATE students  
+SET student_id = 001  
+WHERE student_name = 'AJEET';  
+
+
+This SQL UPDATE example would update the student_id to '001' in the student table where student_name is 'AJEET'.
+
+SQL UPDATE EXAMPLE WITH UPDATING MULTIPLE COLUMNS:
+
+To update more than one column with a single update statement:
+
+UPDATE students  
+SET student_name = 'AJEET',  
+Religion = 'HINDU'  
+WHERE student_name = 'RAJU';  
+This SQL UPDATE statement will change the student name to 'AJEET' and religion to 'HINDU' where the student name is 'RAJU'.
+
+
