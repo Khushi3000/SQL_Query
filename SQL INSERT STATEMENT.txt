@@ -1,0 +1,25 @@
+1) Inserting data directly into a table
+
+We can insert a row in the table by using SQL INSERT INTO command.
+
+There are two ways to insert values in a table.
+
+In the first method there is no need to specify the column name where the data will be inserted, you need only their values.
+
+
+INSERT INTO table_name  
+VALUES (value1, value2, value3....);  
+The second method specifies both the column name and values which you want to insert.
+
+INSERT INTO table_name (column1, column2, column3....)  
+VALUES (value1, value2, value3.....);  
+
+
+
+2)Inserting data through SELECT Statement
+SQL INSERT INTO SELECT Syntax
+
+INSERT INTO table_name  
+[(column1, column2, .... column)]  
+SELECT column1, column2, .... Column N  
+FROM table_name [WHERE condition];  
