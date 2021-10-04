@@ -1,4 +1,4 @@
-# SQL_Qwery
+# SQL_Query
 
 ![Untitled](https://user-images.githubusercontent.com/55308841/135750163-2f8946e0-5617-43b0-a6ee-7b4c69d7d06f.png)
 
