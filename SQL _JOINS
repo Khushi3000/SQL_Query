@@ -1,0 +1,32 @@
+JOINS:  A MECHANISM TO COMPARE & COMBINE MULTIPLE TABLES
+PURPOSE : USED FOR DATA ACCESS & REPORTING
+
+Syntax:
+				SELECT <columnlist> FROM  
+				TABLE1     			-- LEFT   TABLE
+				<JOIN TYPE>
+				TABLE2				-- RIGHT   TABLE
+				ON <JOIN CONDITION>
+
+
+
+TYPES OF JOINS:	
+
+	1. CROSS JOIN	:   USED TO REPORT ALL POSSIBLE COMBINATIONS OF DATA. NO COMPARISONS. 
+			    USED FOR FOR UNRELEATED TABLES. Similar to Cartesian Product in Algebra (Maths)
+						
+	2. INNER JOIN	:   USED TO REPORT MATCHING DATA ONLY.
+
+	3. OUTER JOINS  :   USED TO REPORT MATCHING DATA & MISSING DATA
+		3.a - LEFT OUTER JOIN :  All Left Table Data + Matching Right Table Data. 
+					 Non match Right table data is reported as null.
+								  
+		3.b - RIGHT OUTER JOIN :  All Right Table Data + Matching Left Table Data. 
+					  Non match Left table data is reported as null. 
+
+		3.c - FULL OUTER JOIN :  Combined output of LEFT OUTER JOIN + RIGHT OUTER JOIN
+
+UNION :  ONE TABLE / RESULT BELOW ANOTHER TABLE/RESULT
+JOIN  :	 ONE TABLE / RESULT BESIDE ANOTHER TABLE/RESULT
+
+
